@@ -1,0 +1,36 @@
+﻿@model ProductViewModel
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-sm-9">
+            @using (Html.BeginForm("SaveProduct", "Product", FormMethod.Post))
+            {
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductId)
+                    @Html.TextBoxFor(m => m.ProductId, "", new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductCode)
+                    @Html.TextBoxFor(m => m.ProductCode, "", new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductName)
+                    @Html.TextBoxFor(m => m.ProductName, "", new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Price)
+                    @Html.TextBoxFor(m => m.Price, "", new { @class = "form-control" })
+                </div>
+
+                <input type="submit" value="Save Product" class="btn btn-success" />
+            }
+        </div>
+        <div class="col-lg-6" style="height:300px;background-color:red"></div>
+    </div>
+</div>
+      
+
+
